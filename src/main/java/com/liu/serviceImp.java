@@ -6,14 +6,7 @@ import com.liu.service.Service;
 public class serviceImp implements Service {
 
 
-
-    private bookDao bd  = new daoImp() {
-        @Override
-        public void save() {
-
-        }
-    };
-
+    private bookDao bd ;
     @Override
     public void save() {
         bd.save();

@@ -2,12 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-        <bean id="bookService" class="com.liu.serviceImp1" scope="singleton">
-                <property name="bd" ref="bookDao" ></property>
-        </bean>
-        <bean id="bookDao" class="com.liu.daoImp"></bean>
+        <bean id="bookDao" class="com.liu.daoImp" ></bean>
+        <bean id="bookService" class="com.liu.serviceImp" scope="singleton" autowire="byType"></bean>
+
 <!--        <bean id="serviceImp1" class="com.liu.factory.ServiceFactory" factory-method="getserviceImp1"></bean>-->
-        <bean id="Service" class="com.liu.factory.ServiceFactoryBean"></bean>
 
 
 </beans>
