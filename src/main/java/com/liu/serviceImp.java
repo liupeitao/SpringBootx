@@ -7,7 +7,12 @@ public class serviceImp implements Service {
 
 
 
-    private bookDao bd ;
+    private bookDao bd  = new daoImp() {
+        @Override
+        public void save() {
+
+        }
+    };
 
     @Override
     public void save() {
